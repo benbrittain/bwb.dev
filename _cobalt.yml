@@ -2,6 +2,7 @@ source: "."
 template_extensions:
   - md
   - liquid
+  - html
 site:
   title: bwb
   description: Benjamin Brittain

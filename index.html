@@ -1,0 +1,11 @@
+---
+layout: default.liquid
+---
+
+{% for post in collections.posts.pages %}
+  <div>
+{{post.title}}
+
+<a href = "{{ post.permalink }}"> {{ post.title }} </a>
+  </div>
+{% endfor %}
