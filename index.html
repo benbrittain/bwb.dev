@@ -1,14 +1,15 @@
 ---
 layout: default.liquid
 ---
-
-{% for post in collections.posts.pages %}
-  <div class="post">
-    <div class="title">
-      <a href = "{{ post.permalink }}"> {{ post.title }} </a>
+<div id="index">
+  {% for post in collections.posts.pages %}
+    <div class="post">
+      <div class="title">
+        <a href = "{{ post.permalink }}"> {{ post.title }} </a>
+      </div>
+      <div class="date">
+        {{ post.published_date | date: "%Y-%m-%d" }}
+      </div>
     </div>
-    <div class="date">
-      {{ post.published_date | date: "%Y-%m-%d" }}
-    </div>
-  </div>
-{% endfor %}
+  {% endfor %}
+</div>

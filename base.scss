@@ -14,24 +14,67 @@ header {
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas: 'logo' 'navigation' 'dinkus';
+
+  #logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #navigation {
+    grid-area: navigation;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 100px);
+
+    .elem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  #dinkus {
+    grid-area: dinkus;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+  }
 }
 
 main {
   grid-area: main;
   display: flex;
-  flex-direction: column;
   align-items: center;
-}
+  flex-direction: column;
 
-main > .post {
-  display: inline-grid;
-  padding: 0 0 1px 0;
-  grid-template-columns: repeat(2, 120px);
-}
+  #index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-main > .post > .date {
-  display: flex;
-  justify-content: right;
+    .post {
+      display: inline-grid;
+      padding: 0 0 1px 0;
+      grid-template-columns: repeat(2, 120px);
+
+      .date {
+        display: flex;
+        justify-content: right;
+      }
+    }
+  }
+
+  p {
+    width: 800px;
+    flex-grow: 1 0 0;
+  }
+
+  h1 {
+    margin: 0 0 0 0;
+  }
 }
 
 footer {
@@ -40,30 +83,3 @@ footer {
   justify-content: center;
 }
 
-header > #logo {
-  grid-area: logo;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header > #navigation {
-  grid-area: navigation;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(4, 100px);
-}
-
-header > #navigation > .elem {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header > #dinkus {
-  grid-area: dinkus;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-}
