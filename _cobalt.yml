@@ -1,0 +1,15 @@
+source: "."
+template_extensions:
+  - md
+  - liquid
+site:
+  title: bwb
+  description: Benjamin Brittain
+  base_url: https://bwb.dev
+posts:
+  dir: posts
+  drafts_dir: _drafts
+  rss: rss.xml
+assets:
+  sass:
+    style: Nested
