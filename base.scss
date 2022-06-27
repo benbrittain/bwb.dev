@@ -25,6 +25,7 @@ main {
 
 main > .post {
   display: inline-grid;
+  padding: 0 0 1px 0;
   grid-template-columns: repeat(2, 120px);
 }
 
@@ -64,4 +65,5 @@ header > #dinkus {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 8px;
 }
