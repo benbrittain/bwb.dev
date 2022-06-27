@@ -1,8 +1,54 @@
 body {
+  margin: 0;
+  height: 100vh;
+
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 'header' 'main' 'footer';
 }
 
-.navigation {
-  grid-column-start: 1;
-  grid-column-end: 3;
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 'logo' 'navigation' 'dinkus';
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+}
+
+header > #logo {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header > #navigation {
+  grid-area: navigation;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 100px);
+}
+
+header > #navigation > .elem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header > #dinkus {
+  grid-area: dinkus;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
